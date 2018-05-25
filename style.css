@@ -12,7 +12,6 @@ body{
 header{
     background: #FF3311;
     text-align: center;
-    position: fixed;
     width: 100%;
 }
 
@@ -97,14 +96,63 @@ nav a:hover{
 }
 
 .home-hero{
-    background-image: url('img/coffeeBanner.jpg');
+    display: flex;
+    align-items: center;
     text-align: left;
     height: 100vh;
-    font-size: 2em;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+    margin-left: 15%;
+    font-size: 1.5em;
+}
+.about{
+    display: flex;
+}
+.about img{
+    width: 50%;
+}
+.about-angled-edge {
+    background: #41ade5;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+.about-angled-edge:after{
+    background: inherit;
+    content: '';
+    display: block;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    transform: skewX(-10deg);
+    transform-origin: 100% 0;
+    z-index: -1;
+  }
+
+.work{
+    display: flex;
+}
+.work img{
+    width: 50%;
+}
+.work-angled-edge {
+    background: #41ade5;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+.work-angled-edge:after{
+    background: inherit;
+    content: '';
+    display: block;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    transform: skewX(-10deg);
+    transform-origin: 0 100%;
+    z-index: -1;
 }
 
 
@@ -128,7 +176,6 @@ nav a:hover{
         justify-content: flex-end;
         align-items: center;
     }
-
     nav a{
         opacity: 1;
         position: relative;
