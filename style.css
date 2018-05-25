@@ -10,17 +10,18 @@ body{
 /* Navigation styles start here */
 
 header{
-    background: #FF3311;
+    background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
+    height: 50px;
 }
 
 nav{
     position: absolute;
     text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
     top:100%;
     left: 0;
-    background: #FF3311;
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
@@ -105,16 +106,24 @@ nav a:hover{
 }
 .about{
     display: flex;
+    height: 50vh;
 }
-.about img{
-    width: 50%;
+.about-img{
+width: 80vw;
+   background-image: url('https://source.unsplash.com/random/600x600');
+   background-size: cover;
+   background-position: center;
 }
 .about-angled-edge {
     background: #41ade5;
     color: #fff;
     position: relative;
     z-index: 1;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 .about-angled-edge:after{
     background: inherit;
@@ -131,16 +140,17 @@ nav a:hover{
 
 .work{
     display: flex;
-}
-.work img{
-    width: 50%;
+    height: 50vh;
 }
 .work-angled-edge {
     background: #41ade5;
     color: #fff;
     position: relative;
     z-index: 1;
-    width: 50%;
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 .work-angled-edge:after{
     background: inherit;
@@ -166,9 +176,7 @@ nav a:hover{
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
 
-    .logo{
-        grid-column: 2 / span 1;
-    }
+   
     nav{
         all: unset;
         grid-column: 3 / 4;
@@ -198,7 +206,6 @@ nav a:hover{
     nav ul{
         display: flex;
         justify-content: flex-end;
-        border: 1px solid red;
     }
     nav li{
         margin-left: 3em;
